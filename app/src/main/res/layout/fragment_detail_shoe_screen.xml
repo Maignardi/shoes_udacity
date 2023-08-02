@@ -1,0 +1,93 @@
+<!-- shoe_list_screen.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.shoesstore.presenter.viewmodel.ShoeListScreenViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewShoeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shoe Name" />
+
+        <EditText
+            android:id="@+id/editTextShoeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter shoe name"
+            android:text="@={viewModel.shoeName}" />
+
+        <TextView
+            android:id="@+id/textViewCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company" />
+
+        <EditText
+            android:id="@+id/editTextCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter company name"
+            android:text="@={viewModel.company}" />
+
+        <TextView
+            android:id="@+id/textViewShoeSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shoe Size" />
+
+        <EditText
+            android:id="@+id/editTextShoeSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter shoe size"
+            android:text="@={viewModel.shoeSize}" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description" />
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter shoe description"
+            android:text="@={viewModel.description}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

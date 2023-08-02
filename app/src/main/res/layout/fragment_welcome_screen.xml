@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presenter.ui.fragments.WelcomeScreenFragment"
+    >
+    <!--
+In this XML layout, a LinearLayout is used as the root view for the screen. The choice of using a LinearLayout instead of other layouts like RelativeLayout, ConstraintLayout, or FrameLayout may depend on the specific design requirements and desired behavior for the screen.
+
+1. Simplicity and ease of use: LinearLayout is one of the simplest and easiest layouts to understand and use. It works well when there is a simple linear arrangement of elements, such as a list of items, where elements are organized vertically one after the other.
+
+2. Vertical organization of elements: The vertical orientation of the LinearLayout, indicated by android:orientation="vertical", is suitable for displaying the AppBarLayout and the list of shoe items (all_shoe_items) one below the other, occupying the entire screen from top to bottom.
+
+
+4. Better support for devices with varying screen sizes: LinearLayout allows better control over the distribution of space between child elements, which can be helpful to ensure the screen displays consistently on different screen sizes and densities.
+
+However, it's important to note that the choice of layout depends on the specific design requirements and intended functionalities. Other layouts like ConstraintLayout may be more suitable for more complex cases where precise alignments, element overlapping, or nested layouts are necessary. Without knowing the complete requirements and design details, it is challenging to definitively state if LinearLayout is the best choice for this screen.
+-->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to My App!"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore the Amazing Features"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Started"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/blue"
+            android:padding="16dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/btnGetStarted" />
+    </LinearLayout>
+</FrameLayout>

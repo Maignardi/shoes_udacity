@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+In this XML layout, a LinearLayout is used as the root view for the screen. The choice of using a LinearLayout instead of other layouts like RelativeLayout, ConstraintLayout, or FrameLayout may depend on the specific design requirements and desired behavior for the screen.
+
+1. Simplicity and ease of use: LinearLayout is one of the simplest and easiest layouts to understand and use. It works well when there is a simple linear arrangement of elements, such as a list of items, where elements are organized vertically one after the other.
+
+2. Vertical organization of elements: The vertical orientation of the LinearLayout, indicated by android:orientation="vertical", is suitable for displaying the AppBarLayout and the list of shoe items (all_shoe_items) one below the other, occupying the entire screen from top to bottom.
+
+4. Better support for devices with varying screen sizes: LinearLayout allows better control over the distribution of space between child elements, which can be helpful to ensure the screen displays consistently on different screen sizes and densities.
+
+However, it's important to note that the choice of layout depends on the specific design requirements and intended functionalities. Other layouts like ConstraintLayout may be more suitable for more complex cases where precise alignments, element overlapping, or nested layouts are necessary. Without knowing the complete requirements and design details, it is challenging to definitively state if LinearLayout is the best choice for this screen.
+-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <!-- First TextView -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Second TextView -->
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please follow these instructions carefully."
+        android:textSize="18sp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Navigation Button -->
+    <Button
+        android:id="@+id/buttonNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Shoe List"
+        android:backgroundTint="@color/blue"
+        android:layout_below="@id/textViewDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:menu="@menu/shoe_list_menu"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.shoesstore.presenter.ui.fragments.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.shoesstore.presenter.ui.fragments.InstructionFragment"
+        android:label="fragment_instruction"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.example.shoesstore.presenter.ui.fragments.ShoeListFragment"
+        android:label="ShoeListFragment" >
+        <action
+            android:id="@+id/action_shoeListFragment_to_detailShoeScreenFragment"
+            app:destination="@id/detailShoeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailShoeScreenFragment"
+        android:name="com.example.shoesstore.presenter.ui.fragments.DetailShoeScreenFragment"
+        android:label="fragment_detail_shoe_screen"
+        tools:layout="@layout/fragment_detail_shoe_screen" >
+        <action
+            android:id="@+id/action_detailShoeScreenFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoesstore.presenter.ui.fragments.loginFragment"
+        android:label="loginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
+    </fragment>
+</navigation>
